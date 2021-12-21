@@ -1,11 +1,16 @@
-.html {
+/* Universal Styles */
 
+.html {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
 }
 
 .main-content {
     position: relative;
     top: 4rem;
 }
+
+/* Header */
 
 header {
     position: fixed;
@@ -23,7 +28,6 @@ header {
 
 .logo {
     font-size: 32px;
-    flex: 1;
     padding-left: 24px;
 }
 
@@ -67,3 +71,6 @@ header .mobile {
 }
 
 /*breakpoint of header 700px*/
+
+
+
