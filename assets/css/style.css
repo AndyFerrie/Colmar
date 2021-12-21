@@ -25,6 +25,14 @@
     max-width: 100%;
   }
 
+h1 {
+    font-size: 2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
 /* Header */
 
 header {
@@ -75,22 +83,75 @@ header .mobile {
     display: none;
 }
 
+/* Mobile Header */
+
 @media only screen and (max-width: 620px) {
 
-header .desktop {
-    display: none;
+    header .desktop {
+        display: none;
+    }
+
+    header .mobile {
+        display: flex;
+    }
+
+    header .mobile ul{
+        height: 4rem;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
 }
 
-header .mobile {
+/* Everyday Section */
+
+.everyday {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: lightgray;
 }
 
-header .mobile ul{
-    height: 4rem;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
+.everyday .image-container {
+    width: 60%;
+    margin: 2rem 1.5rem;
 }
+
+.everyday p {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.everyday .button {
+    color: white;
+    background-color: darkgrey;
+    padding: 8px 72px;
+    align-self: center;
+}
+
+.everyday .text-container {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0rem;
+    width: 30%;
+}
+
+/* Mobile Everyday */
+
+@media only screen and (max-width: 620px) {
+
+    .everyday {
+        flex-direction: column;
+    }
+
+    .everyday .image-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    .everyday .text-container {
+        width: 90%;
+    }
 
 }
 
