@@ -1,7 +1,7 @@
 /* Universal Styles */
 
 .html {
-    font-family: "Roboto", sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
 
@@ -10,64 +10,69 @@
     top: 4rem;
 }
 
+.button {
+    border-radius: 4px;
+    background-color: #4a4a4a;
+    color: white;
+  }
+
+.image-container {
+    overflow: hidden;
+}
+
+.image-container img {
+    display: block;
+    max-width: 100%;
+  }
+
 /* Header */
 
 header {
     position: fixed;
-    z-index: 100;
-    height: 4rem;
+    z-index: 1;
+    top: 0;
+    width: 100vw;
+}
+
+header .content {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
     color: darkgray;
-    top: 0;
-    display: flex;
-    align-items: center;
-    width: 100vw;
-    justify-content: space-between;
-}
-
-
-.logo {
-    font-size: 32px;
-    padding-left: 24px;
-}
-
-.logo a {
+    font-size: 1 rem;
     text-decoration: none;
 }
 
-/* Vertical align image inside an anchor with CSS - https://stackoverflow.com/questions/20700475/vertical-align-image-inside-an-anchor-with-css */
+header .desktop {
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+header strong {
+    font-weight: bold;
+}
+
+        /* Vertical align image inside an anchor with CSS - https://stackoverflow.com/questions/20700475/vertical-align-image-inside-an-anchor-with-css */
 .logo img {
     margin: auto;
     vertical-align: middle; 
     display: inline-block;
 }
 
-nav {
-    float: right;
-    margin-right: 24px;
-}
-
-nav a {
-    text-decoration: none;
-}
-
-nav ul {
+header nav ul {
     display: flex;
     list-style: none;
 }
 
 header li {
-    margin-left: 1rem;
-    
+    margin-left: 1rem;  
 }
 
 header .mobile {
     display: none;
-}
-
-.image {
-    max-width: 100%;
-    overflow: hidden;
 }
 
 /*breakpoint of header 700px*/
