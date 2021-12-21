@@ -1,0 +1,67 @@
+.html {
+
+}
+
+.main-content {
+    position: relative;
+    top: 4rem;
+}
+
+header {
+    position: fixed;
+    z-index: 100;
+    height: 4rem;
+    background-color: white;
+    color: darkgray;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-size: 32px;
+    flex: 1;
+    padding-left: 24px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+/* Vertical align image inside an anchor with CSS - https://stackoverflow.com/questions/20700475/vertical-align-image-inside-an-anchor-with-css */
+.logo img {
+    margin: auto;
+    vertical-align: middle; 
+    display: inline-block;
+}
+
+nav {
+    float: right;
+    margin-right: 24px;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header li {
+    margin-left: 1rem;
+    
+}
+
+header .mobile {
+    display: none;
+}
+
+.image {
+    max-width: 100%;
+    overflow: hidden;
+}
