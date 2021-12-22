@@ -8,11 +8,11 @@
 .main-content {
     position: relative;
     top: 4rem;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .button {
-    border-radius: 4px;
-    background-color: #4a4a4a;
+    background-color: darkgrey;
     color: white;
   }
 
@@ -29,8 +29,16 @@ h1 {
     font-size: 2rem;
 }
 
-p {
+h2 {
     font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 1rem;
 }
 
 /* Header */
@@ -39,14 +47,19 @@ header {
     position: fixed;
     z-index: 1;
     top: 0;
-    width: 100vw;
+    width: 100%;
 }
+
+header a {
+    color: black;
+    text-decoration: none;
+  }
 
 header .content {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: white;
     color: darkgray;
-    font-size: 1 rem;
+    font-size: 1rem;
     text-decoration: none;
 }
 
@@ -123,17 +136,20 @@ header .mobile {
 }
 
 .everyday .button {
-    color: white;
     background-color: darkgrey;
-    padding: 8px 72px;
+    padding: 0.5rem 4.5rem;
     align-self: center;
+}
+
+.everyday a {
+    color: white;
 }
 
 .everyday .text-container {
     display: flex;
     flex-direction: column;
     margin: 2rem 0rem;
-    width: 30%;
+    width: 40%;
 }
 
 /* Mobile Everyday */
@@ -155,6 +171,114 @@ header .mobile {
 
 }
 
+/* Practicing Section */
+
+.practice {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.practice .mobile {
+    display: none;
+}
+
+.practice .left {
+    width: 60%;
+    margin: 2rem 1.5rem;
+}
+
+.practice .right {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+
+.practice .right .image-container {
+    width: 35%;
+    margin: 1rem;
+}
+
+.practice .right .text-container {
+    width: 65%;
+}
+
+.practice .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.practice a {
+    color: blue;
+    font-size: 0.9rem;
+}
+
+.practice h2 {
+    padding: 2.25rem 0rem 1.5rem 0rem;
+}
+
+.practice figcaption {
+    padding: 2rem 0rem;
+}
+
+blockquote::before {
+    content: open-quote;
+}
+
+blockquote::after {
+    content: close-quote;
+}
+
+.practice p {
+    font-size: 0.9rem;
+    padding: 0.5rem 0rem;
+}
+
+.guest {
+    background-color: lightgray;
+}
+
+/* Mobile Practice */
+
+@media only screen and (max-width: 620px) {
+
+    .practice .left {
+        display: none;
+    }
+
+    .practice .desktop {
+        display: none;
+    }
+
+    .practice .mobile {
+        display: block;
+    }
+
+    .practice .right {
+        width: 100%;
+    }
+
+    .practice .content {
+        flex-direction: column;
+    }
+
+    .practice .right .image-container {
+        width: 90%;
+        margin: 2rem;
+    }
+    
+    .practice .right .text-container {
+        width: 90%;
+        margin: 0rem 2rem;
+    }
+
+    .guest {
+        background-color: white;
+    }
+}
 
 
 
