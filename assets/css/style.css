@@ -1,15 +1,22 @@
+/* Fonts
+
+    font-family: 'Lato', sans-serif;
+
+    font-family: 'Merriweather Sans', sans-serif;
+
+    font-family: 'Open Sans', sans-serif;
+
+
 /* Universal Styles */
 
 .html {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
-    
 }
 
 .main-content {
     position: relative;
     top: 4rem;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 
 .button {
@@ -144,14 +151,17 @@ header .mobile {
 
 .everyday .button {
     background-color: darkgrey;
-    padding: 0.5rem 4.5rem;
     align-self: center;
-  
 }
 
 .everyday a {
     color: white;
     text-decoration: none;
+    width: 9rem;
+    height: 2rem;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
 }
 
 .everyday .text-container {
@@ -221,7 +231,7 @@ header .mobile {
 }
 
 .practice a {
-    color: blue;
+    color: rgb(6,69,173);
     text-decoration: none;
     font-size: 0.9rem;
 }
@@ -246,8 +256,9 @@ blockquote::after {
     padding: 0.5rem 0rem;
 }
 
-.guest {
+.practice .content:hover {
     background-color: rgb(220, 220, 220);
+    transition: all 0.2s ease-in;
 }
 
 /* Mobile Practice */
@@ -281,11 +292,7 @@ blockquote::after {
     
     .practice .right .text-container {
         width: 90%;
-        margin: 0rem 2rem;
-    }
-
-    .guest {
-        background-color: white;
+        margin: 0rem 2rem 1rem;
     }
 }
 
@@ -336,6 +343,7 @@ blockquote::after {
 
     .learning .courses {
         flex-direction: column;
+        align-items: center;
     }
 
     .learning .text-container {
@@ -343,8 +351,15 @@ blockquote::after {
     }
 
     .learning .content {
-        width: 100%;
+        width: 90%;
     }
+
+    .learning .text-container:hover {
+        background-color: darkgray;
+        color: white;
+        transition: all 0.2s ease-in;
+    }
+
 }
 
 /* Thesis Section */
@@ -391,9 +406,11 @@ blockquote::after {
 /* Footer */
 
 footer {
-    margin: 50px 24px;
+    margin-top: 3rem;
+    padding: 1.5rem;
     display: flex;
     justify-content: space-between;
+    background-color: rgb(220, 220, 220);
 }
 
 footer ul {
@@ -408,4 +425,83 @@ footer li {
 footer a {
     text-decoration: none;
     color: black;
+}
+
+/* Hover - Rectangle Out - https://ianlunn.github.io/Hover/ */
+
+.hvr-rectangle-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    background: #e1e1e1;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-rectangle-out:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2098D1;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-rectangle-out:hover, .hvr-rectangle-out:focus, .hvr-rectangle-out:active {
+    color: white;
+  }
+  .hvr-rectangle-out:hover:before, .hvr-rectangle-out:focus:before, .hvr-rectangle-out:active:before {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+
+ /* Hover - Underline From Center - https://ianlunn.github.io/Hover/ */
+ /* Desktop Only */
+
+ @media only screen and (min-width: 620px) {
+
+.hvr-underline-from-center {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+  .hvr-underline-from-center:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #2098D1;
+    height: 4px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-underline-from-center:hover:before, .hvr-underline-from-center:focus:before, .hvr-underline-from-center:active:before {
+    left: 0;
+    right: 0;
+  }
+
 }
