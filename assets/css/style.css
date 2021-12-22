@@ -3,6 +3,7 @@
 .html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
+    
 }
 
 .main-content {
@@ -20,7 +21,7 @@
     overflow: hidden;
 }
 
-.image-container img {
+.image-container img, video {
     display: block;
     max-width: 100%;
   }
@@ -37,8 +38,13 @@ h3 {
     font-size: 1.2rem;
 }
 
+h1, h2, h3 {
+    font-weight: bold;
+}
+
 p {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    color: rgb(77, 77, 77);
 }
 
 /* Header */
@@ -122,7 +128,8 @@ header .mobile {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: lightgray;
+    background-color: rgb(220, 220, 220);
+   
 }
 
 .everyday .image-container {
@@ -139,10 +146,12 @@ header .mobile {
     background-color: darkgrey;
     padding: 0.5rem 4.5rem;
     align-self: center;
+  
 }
 
 .everyday a {
     color: white;
+    text-decoration: none;
 }
 
 .everyday .text-container {
@@ -213,6 +222,7 @@ header .mobile {
 
 .practice a {
     color: blue;
+    text-decoration: none;
     font-size: 0.9rem;
 }
 
@@ -233,12 +243,11 @@ blockquote::after {
 }
 
 .practice p {
-    font-size: 0.9rem;
     padding: 0.5rem 0rem;
 }
 
 .guest {
-    background-color: lightgray;
+    background-color: rgb(220, 220, 220);
 }
 
 /* Mobile Practice */
@@ -280,7 +289,123 @@ blockquote::after {
     }
 }
 
+/* Learning Section */
+
+.learning {
+    background-color: rgb(220, 220, 220);
+}
+
+.learning .title {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.learning .courses {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem 1.5rem;
+    justify-content: center;
+}
+
+.learning .content {
+    box-sizing: border-box;
+    width: 30%;
+    margin: 0.5rem;
+    background-color: white;
+}
+
+.learning .text-container {
+    padding: 1rem;
+}
+
+.learning h4 {
+    padding: 0.5rem 0rem;
+}
+
+/* Mobile Learning */
+
+@media only screen and (max-width: 620px) {
+
+    .learning {
+        background-color: white;
+    }
+    
+    .learning .image-container, .learning h4, .learning p {
+        display: none;
+    }
+
+    .learning .courses {
+        flex-direction: column;
+    }
+
+    .learning .text-container {
+        background-color: rgb(220, 220, 220);
+    }
+
+    .learning .content {
+        width: 100%;
+    }
+}
+
+/* Thesis Section */
+
+.thesis .title {
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.thesis .container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.thesis .left {
+    width: 60%;
+    margin: 2rem 1.5rem;
+}
+
+.thesis .right {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: flex-start;
+    margin-top: 1rem;
+}
+
+.thesis .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.thesis .content .image-container {
+    width: 35%;
+    margin: 1rem;
+}
+
+.thesis .content .text-container {
+    width: 65%;
+}
 
 
+/* Footer */
 
+footer {
+    margin: 50px 24px;
+    display: flex;
+    justify-content: space-between;
+}
 
+footer ul {
+    display: flex;
+    list-style: none;
+}
+
+footer li {
+    padding-left: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
