@@ -11,6 +11,7 @@
 
 .html {
     font-size: 16px;
+    color: rgb(77, 77, 77);
 }
 
 .main-content {
@@ -42,16 +43,21 @@ h2 {
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 h1, h2, h3 {
     font-weight: bold;
 }
 
+h4 {
+    font-weight: 300;
+}
+
 p {
     font-size: 0.9rem;
-    color: rgb(77, 77, 77);
+    font-weight: 300;
+    line-height: 1.4;
 }
 
 /* Header */
@@ -68,8 +74,12 @@ header a {
     text-decoration: none;
   }
 
+header .logo {
+    font-size: 1.5rem;
+}
+
 header .content {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Lato;
     background-color: white;
     color: darkgray;
     font-size: 1rem;
@@ -87,6 +97,10 @@ header .desktop {
 
 header strong {
     font-weight: bold;
+}
+
+header span {
+    font-weight: 100;
 }
 
         /* Vertical align image inside an anchor with CSS - https://stackoverflow.com/questions/20700475/vertical-align-image-inside-an-anchor-with-css */
@@ -109,9 +123,18 @@ header .mobile {
     display: none;
 }
 
+header img:hover {
+    transform: scale(1.5);
+    transition: all 0.2s ease-in-out;
+}
+
+header a:hover {
+    color: #2098D1;
+}
+
 /* Mobile Header */
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 680px) {
 
     header .desktop {
         display: none;
@@ -136,12 +159,11 @@ header .mobile {
     justify-content: flex-start;
     align-items: center;
     background-color: rgb(220, 220, 220);
-   
 }
 
-.everyday .image-container {
+.everyday .left {
     width: 60%;
-    margin: 2rem 1.5rem;
+    margin: 2rem;
 }
 
 .everyday p {
@@ -157,37 +179,44 @@ header .mobile {
 .everyday a {
     color: white;
     text-decoration: none;
-    width: 9rem;
+    width: 16rem;
     height: 2rem;
     display: inline-block;
     line-height: 2rem;
     text-align: center;
 }
 
+.everyday .right {
+    width: 40%;
+}
+
 .everyday .text-container {
     display: flex;
     flex-direction: column;
-    margin: 2rem 0rem;
-    width: 40%;
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 /* Mobile Everyday */
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 680px) {
 
     .everyday {
         flex-direction: column;
     }
 
-    .everyday .image-container {
+    .everyday .left {
         width: 100%;
-        margin: 0;
+        margin: 0
+    }
+
+    .everyday .right {
+        width: 100%;
     }
 
     .everyday .text-container {
-        width: 90%;
+        margin: 2rem 1.5rem;
     }
-
 }
 
 /* Practicing Section */
@@ -204,7 +233,7 @@ header .mobile {
 
 .practice .left {
     width: 60%;
-    margin: 2rem 1.5rem;
+    margin: 2rem;
 }
 
 .practice .right {
@@ -212,7 +241,7 @@ header .mobile {
     flex-direction: column;
     width: 40%;
     justify-content: flex-start;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .practice .right .image-container {
@@ -222,6 +251,7 @@ header .mobile {
 
 .practice .right .text-container {
     width: 65%;
+    margin-right: 1.5rem;
 }
 
 .practice .content {
@@ -231,17 +261,18 @@ header .mobile {
 }
 
 .practice a {
-    color: rgb(6,69,173);
+    color: #2098D1;
     text-decoration: none;
     font-size: 0.9rem;
 }
 
 .practice h2 {
-    padding: 2.25rem 0rem 1.5rem 0rem;
+    padding: 2rem 0 1.5rem 0;
 }
 
 .practice figcaption {
-    padding: 2rem 0rem;
+    padding: 2rem 0 0;
+    font-size: 0.9rem;
 }
 
 blockquote::before {
@@ -252,8 +283,13 @@ blockquote::after {
     content: close-quote;
 }
 
+.practice blockquote {
+    font-weight: 300;
+}
+
 .practice p {
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 0 0;
+    font-weight: 300;
 }
 
 .practice .content:hover {
@@ -263,7 +299,7 @@ blockquote::after {
 
 /* Mobile Practice */
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 680px) {
 
     .practice .left {
         display: none;
@@ -316,8 +352,8 @@ blockquote::after {
 
 .learning .content {
     box-sizing: border-box;
-    width: 30%;
-    margin: 0.5rem;
+    width: 29%;
+    margin: 1rem;
     background-color: white;
 }
 
@@ -325,13 +361,17 @@ blockquote::after {
     padding: 1rem;
 }
 
+.learning h2 {
+    font-size: 2rem;
+}
+
 .learning h4 {
-    padding: 0.5rem 0rem;
+    padding: 1rem 0rem 0.5rem;
 }
 
 /* Mobile Learning */
 
-@media only screen and (max-width: 620px) {
+@media only screen and (max-width: 680px) {
 
     .learning {
         background-color: white;
@@ -352,11 +392,11 @@ blockquote::after {
 
     .learning .content {
         width: 90%;
+        margin: 0.5rem;
     }
 
     .learning .text-container:hover {
         background-color: darkgray;
-        color: white;
         transition: all 0.2s ease-in;
     }
 
@@ -376,7 +416,7 @@ blockquote::after {
 
 .thesis .left {
     width: 60%;
-    margin: 2rem 1.5rem;
+    margin: 2rem;
 }
 
 .thesis .right {
@@ -400,6 +440,56 @@ blockquote::after {
 
 .thesis .content .text-container {
     width: 65%;
+    margin-right: 1.5rem;
+}
+
+.thesis h2 {
+    font-size: 2rem;
+}
+
+.thesis blockquote {
+    font-weight: 300;
+    padding-bottom: 1.5rem;
+}
+
+.thesis .left h3 {
+    padding: 1.5rem 0 0.5rem;
+}
+
+.thesis p {
+    padding-top: 0.5rem;
+}
+
+.thesis .content:hover {
+    background-color: rgb(220, 220, 220);
+    transition: all 0.2s ease-in;
+}
+
+/* Mobile Thesis */
+
+@media only screen and (max-width: 680px) {
+
+    .thesis .right {
+        display: none;
+    }
+
+    .thesis .text-container {
+        display: none;
+    }
+
+    .thesis .left {
+        width: 100%;
+        margin: 0;
+    }
+
+    .thesis .title {
+        padding: 0 0 2rem;
+    }
+
+    .thesis .video-container {
+        padding-bottom: 3rem;
+    }
+
 }
 
 
@@ -411,6 +501,7 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: rgb(220, 220, 220);
+    font-family: 'Lato';
 }
 
 footer ul {
@@ -425,6 +516,10 @@ footer li {
 footer a {
     text-decoration: none;
     color: black;
+}
+
+footer a:hover {
+    color: #2098D1;
 }
 
 /* Hover - Rectangle Out - https://ianlunn.github.io/Hover/ */
@@ -472,7 +567,7 @@ footer a {
  /* Hover - Underline From Center - https://ianlunn.github.io/Hover/ */
  /* Desktop Only */
 
- @media only screen and (min-width: 620px) {
+ @media only screen and (min-width: 680px) {
 
 .hvr-underline-from-center {
     display: inline-block;
