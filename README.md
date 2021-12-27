@@ -1,6 +1,6 @@
 # CodeCademy Project: Colmar Academy
 
-This is my solution to the Colmar Academy challenge in CodeCademy's Learn How To Build Websites Course
+This is my solution to the Colmar Academy challenge in CodeCademy's Build a Website with HTML, CSS and Github Pages Course
 
 ## Table of contents
 
