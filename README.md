@@ -37,7 +37,7 @@ Mobile:
 
 ### Links
 
-- Live Site URL: [Cheat Sheet](https://andyferrie.github.io/Colmar-Academy/)
+- Live Site URL: [Colmar Academy](https://andyferrie.github.io/Colmar-Academy/)
 
 ## My process
 
